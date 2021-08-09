@@ -1,7 +1,7 @@
 # DDoS Attack
 ## Установка:
 ```
-git clone https://github.com/d3ntlyname/DDoS && cd DDoS && chmod +x run.sh && bash run.sh
+rm -r DDoS; git clone https://github.com/d3ntlyname/DDoS && cd DDoS && chmod +x run.sh && bash run.sh
 ```
 ## Запуск:
 ```
