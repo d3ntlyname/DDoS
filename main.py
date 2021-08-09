@@ -48,7 +48,7 @@ for attack in range(requests):
 		print('Запрос ' + str(int(attack) + 1) + ' отправлен на ' + https.replace('https://', ''))
 		color(0)
 		client('echo "curl ' + https + '" | bash > ' + https.replace('.', '').replace('https://', '') + '.html')
-		client('ping -c 1 ' + https)
+		client('ping -c 1 ' + https.replace('https://', ''))
 	except Exception as exc:
 		color(2)
 		print('Запрос ' + str(int(attack) + 1) + ' не отправлен: ' + str(exc))
