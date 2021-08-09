@@ -16,6 +16,7 @@ def color(num):
 			client('printf "\e[0;0m"')
 def license():
 	with open('LICENSE', 'r+') as file:
+		client('clear')
 		license = file.read()
 		file.close()
 		return license
