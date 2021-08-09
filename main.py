@@ -16,7 +16,6 @@ def color(num):
 			client('printf "\e[0;0m"')
 def license():
 	with open('LICENSE', 'r+') as file:
-		client('clear')
 		license = file.read()
 		file.close()
 		return license
@@ -49,6 +48,7 @@ for attack in range(requests):
 		print('Запрос ' + str(int(attack) + 1) + ' отправлен на ' + https.replace('https://', ''))
 		color(0)
 		client('echo "curl ' + https + '" | bash > ' + https.replace('.', '').replace('https://', '') + '.html')
+		client('ping -c 1 ' + https)
 	except Exception as exc:
 		color(2)
 		print('Запрос ' + str(int(attack) + 1) + ' не отправлен: ' + str(exc))
