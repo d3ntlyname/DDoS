@@ -2,5 +2,8 @@ apt install python3.9 -y
 apt install git -y
 apt install curl
 apt install figlet
-pip3 install -r requirements.txt
+python3 -m pip install asyncio
+python3 -m pip install lolcat
+python3 -m pip install requests
+python3 -m pip install time
 python3 main.py
